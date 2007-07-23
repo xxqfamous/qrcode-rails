@@ -1,9 +1,14 @@
+
 <h1>QRCode</h1>
 
 <p>To get an QRCode, enter the url and size below: </p>
 
-<% form_tag :action => :show do -%>
+<% form_remote_tag :url => '/qrcode/show' do -%>
 	<div>URL: <%= text_field_tag 'url', 'http://www.google.com/' %></div>
 	<div>Size: <%= select_tag 'size', options_for_select([ "2", "4", "8" ], "2") %> </div>
 	<div><%= submit_tag 'Get QRCode' %></div>
 <% end -%>
+
+<div id="qrcode">
+
+</div>
