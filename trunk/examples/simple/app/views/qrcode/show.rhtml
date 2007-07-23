@@ -1,0 +1,6 @@
+<h2>Your URL:</h2>
+<p><%= h(@url) %></p>
+
+<h2>Your QR Code:</h2>
+<%= javascript_include_tag :defaults %>
+<%= qrcode(h(@url), @size) %>
