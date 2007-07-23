@@ -1,9 +1,9 @@
 module QRCode
   module QRCodeHelper
-    def qrcode(channels = nil, unique_id = nil)      
+    def qrcode(url)
       output = %Q{<script type="text/javascript">
 var qr = new QRCode(4, QRErrorCorrectLevel.H);
-qr.addData("http://www.d-project.com/qrcode/");
+qr.addData(#{url});
 qr.make();
 document.write("<table style='border-width: 0px; border-style: none; border-color: #0000ff; border-collapse: collapse;'>");
 for (var r = 0; r < qr.getModuleCount(); r++) {
