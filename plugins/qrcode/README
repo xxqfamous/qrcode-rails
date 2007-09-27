@@ -17,11 +17,12 @@ Usage
    <%= javascript_include_tag :defaults %>
 
  - Add following funtion to where you want to generate QRCode.
-   <%= qrcode('http://www.google.com/', 2, 'my-qrcode') %>
+   <%= qrcode('http://www.google.com/', 2, 4, 'my-qrcode') %>
   
   * The first parameter is URL
   * The second optional parameter is pixel size.
-  * The third optional parameter is ID of the generated div
+  * The third optional parameter is QR Code type number, 1-10, the higher the number, more data can be stored. Default 4.
+  * The 4th optional parameter is ID of the generated div
 
 Example
 -------
