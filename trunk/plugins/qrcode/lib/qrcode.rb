@@ -1,9 +1,9 @@
 module QRCode
   module QRCodeHelper
-    def qrcode(url, size=2, id=nil)
+    def qrcode(url, size=2, level=4, id=nil)
       id ||= "qrcode_#{rand()}"
       output = %Q{<div class="qrcode" id="#{id}"></div><script type="text/javascript">
-var qr = new QRCode(4, QRErrorCorrectLevel.H);
+var qr = new QRCode(#{level}, QRErrorCorrectLevel.H);
 qr.addData('#{url}');
 qr.make();
 var text = "";
